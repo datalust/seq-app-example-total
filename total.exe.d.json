@@ -1,0 +1,16 @@
+{
+  "$schema": "https://getseq.net/schema/app-definition/v1",
+  "name": "Total Example",
+  "description": "Keeps and prints a running total of a numeric property.",
+  "allowReprocessing": false,
+  "executable": "total.exe", 
+  "arguments":  null, 
+  "settings": {
+    "propertyName": {
+      "displayName": "Property to total",
+      "helpText": "The name of a numeric property for the app to detect and report the total of.",
+      "isOptional": false,
+      "inputType": "text" 
+    }
+  }
+}

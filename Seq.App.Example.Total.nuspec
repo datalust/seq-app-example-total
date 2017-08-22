@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Seq.App.Example.Total</id>
+    <version>$version$</version>
+    <authors>Datalust and Contributors</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An example app for Seq (https://getseq.net) that keeps and prints a running total of a given event property.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/datalust/seq-app-example-total</projectUrl>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <iconUrl>https://getseq.net/images/apps/seq-app-first-of-type.png</iconUrl>
+    <tags>seq-app</tags>
+  </metadata>
+  <files>
+    <file src="target\release\total.exe" target="" />
+    <file src="total.exe.d.json" target="" />
+  </files>
+</package>
