@@ -55,15 +55,11 @@ fn main() {
     for input in stdin.lock().lines() {
         let line = input.unwrap();
         let data: Value = serde_json::from_str(&line).unwrap();
-        if let Value::Object(ref props) = data {
-            if let Some(ref prop) = props.get(&property_name) {
-                if let &&Value::Number(ref n) = prop {
-                    if let Some(f) = n.as_f64() {
-                        current_total += f;
-                        emit_total(&property_name, current_total)
-                    }
-                }
-            }
+        if let Some(f) = data.as_object()
+                .and_then(|o| o.get(&property_name))
+                .and_then(|n| n.as_f64()) {
+            current_total += f;
+            emit_total(&property_name, current_total);
         }
     }
 }
